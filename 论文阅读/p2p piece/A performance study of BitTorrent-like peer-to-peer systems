@@ -1,0 +1,11 @@
+《A performance study of BitTorrent-like peer-to-peer systems》
+
+IEEE JOURNAL ON SELECTED AREAS IN COMMUNICATIONS, VOL. 25, NO. 1, JANUARY 2007
+
+本文基于广泛的测量和跟踪分析，通过建模对类似bittorrent的P2P系统进行了性能研究。现有的关于BitTorrent系统的研究是基于单个torrent的，并且通常假设请求到达torrent的过程是泊松式的。然而，在现实中，大多数bt对等体参与多个种子和文件流行度随时间而变化。我们对具有代表性的BitTorrent流量的研究提供了对单torrent系统演变的见解，并提供了关于BitTorrent系统局限性的几个新发现:
+
+(1)由于torrent中对等到达率呈指数级下降，相应文件的服务可用性迅速变差，最终难以定位和下载该文件。
+(2)类bittorrent系统的客户端性能不稳定，随着在线对等体数量的变化，客户端性能波动较大。
+(3)现有系统可能对对等体提供不公平的服务，下载速度越快的对等体往往下载得越多，上传得越少。在分析和建模结果的启发下，我们进一步提出了一种基于图的模型来研究多流之间的相互作用。
+
+我们的模型定量地表明，在解决BitTorrent系统中服务不可用的问题时，种子之间的协作比刺激种子服务更长时间要有效得多。讨论了基于交换的即时激励机制下的流间协作体系结构，并通过仿真对其进行了评价。
