@@ -132,3 +132,27 @@ func (s *managerServerV1) ListSchedulers(ctx context.Context, req *managerv1.Lis
 
 }
 ```
+
+
+代码段解读
+
+```Go
+var schedulerClusters []models.SchedulerCluster
+if err := s.db.WithContext(ctx).Preload("SeedPeerClusters.SeedPeers", "state = ?", "active").
+    Preload("Schedulers", "state = ?", "active").Find(&schedulerClusters).Error; err != nil {
+    return nil, status.Error(codes.Internal, err.Error())
+}
+```
+
+通过Dbeaver 数据库查看，是从SeedPeerClusters去管理SeedPeers，找到其active状态的seedpeer
+
+SeedPeerClusters主要是确认是是否是删除的状态
+![alt text](image.png)
+SeedPeers 确认其激活状态
+![alt text](image-1.png)
+![alt text](image-2.png)
+以此去找对应集群的scheduler
+![alt text](image-3.png)
+
+因此我们想实现trainer找到所有的scheduler 来init 一个初始化的base_model，只用从Scheduler里面preheat就行了。
+当然这里我只考虑单个cluster部署，多个的话还要考虑trainer所属集群，然后获取到对应集群的scheduler。
