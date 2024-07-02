@@ -156,3 +156,5 @@ SeedPeers 确认其激活状态
 
 因此我们想实现trainer找到所有的scheduler 来init 一个初始化的base_model，只用从Scheduler里面preheat就行了。
 当然这里我只考虑单个cluster部署，多个的话还要考虑trainer所属集群，然后获取到对应集群的scheduler。
+
+这里我打算在d7y里面把protoc 给实现了，毕竟api是无法上传并公布的，所有的api都在pkg里面自己重新实现。
