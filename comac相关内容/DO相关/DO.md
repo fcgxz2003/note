@@ -74,4 +74,4 @@ DO-178和DO-178C都是航空软件开发的重要标准，它们是由RTCA（Rad
 ## 书籍
 《安全关键软件开发与审定——do-178c标准实践指南》
 
-https://visuresolutions.com/zh-CN/%E5%81%9A178%E6%8C%87%E5%8D%97/%E6%9C%BA%E8%BD%BD%E7%B3%BB%E7%BB%9F%E8%AE%A4%E8%AF%81
+https://visuresolutions.com/zh-CN/do-178-guide/do-333
