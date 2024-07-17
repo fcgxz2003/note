@@ -225,3 +225,14 @@ Polyspace可以根据一些编码标准执行验证，比如MISRA c。这包括�
 
 还有一些开放源码的抽象解释工具可用，但它们超出了本案例研究的范围。Frama-C[6]是一套用于软件编写的静态分析工具。它的Value Analysis插件使用抽象解释来计算程序中每个变量的一组可能值，并以自动和用户引导两种模式运行。IKOS是一个c++库，旨在促进基于抽象解释的声音静态分析器的开发[16]。IKOS为最先进的抽象解释数据结构和算法提供了通用且高效的实现，如控制流图、不动点迭代器、数值抽象域等。
 
+% 写的什么鬼，根本看不懂
+
+##### 生命周期数据项
+底层软件需求在heading_control文件中指定为MATLAB Simulink模型。以及模型库Controller_Lib。mdl和Actuator_Lib。Mdl，以及相关脚本的集合。
+
+要分析的源代码是使用MathWorks RTW从Simulink LowLevel Requirements自动生成的C代码。代码包含在文件ert_main.c、heading_control.c和heading_control.h中，以及其他几个头文件中。在本案例研究中没有验证单独的行为需求。抽象解释被用来验证C代码的一组标准运行时属性。
+
+##### 需要满足的目标
+通过抽象解释所要满足的DO-178C和DO-333目标总结于表49。本节将更详细地讨论如何实现每个目标。
+
+![alt text](image-12.png)
