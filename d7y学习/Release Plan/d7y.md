@@ -1,6 +1,12 @@
 # Release cycle and cadence 
 The Dragonfly project aims to release two updates in a yearly time period, typically one in every six months.
 
+|     | First half of 2023|Second half of 2023|
+|--------:|-----:|-----:|
+|电脑  | $1600|$1600|
+|手机  | $12|$1600|
+|导管  | $1|$1600|
+
 <img src="images/release-cycle-diagram.png?raw=true">
 
 
