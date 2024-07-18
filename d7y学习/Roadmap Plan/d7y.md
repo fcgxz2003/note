@@ -12,11 +12,7 @@ The current Dragonfly release is v2.1.0. Details can be found in the [release no
 
 ### Next Release
 
-The next release is v2.2.0 This release is currently in development. The [%这个地址要更新 release planning](https://d7y.io/docs/next/roadmap-v2.2/) contains the features and enhancements planned for this release.
-
-### Future Releases
-
-Features or important changes for future releases include:
+The next release is v2.2.0 This release is currently in development. Features or important changes for next releases include:
 
 **Manager:**
 - Peer features are configurable. For example, you can make the peer can not be uploaded and can only be downloaded.
