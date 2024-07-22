@@ -1,0 +1,1 @@
+curl -x 172.29.6.36:7890 -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
