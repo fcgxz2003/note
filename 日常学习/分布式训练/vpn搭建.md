@@ -48,3 +48,6 @@ https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos#InstallingOpenVP
 
 
 ### client 之间不互通，需要在server.conf 文件中添加client-to-client.
+把 /etc/openvpn/server.conf 配置内容添加client-to-client
+重启openvpn服务
+systemctl restart openvpn@server
