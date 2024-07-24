@@ -51,3 +51,15 @@ https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos#InstallingOpenVP
 把 /etc/openvpn/server.conf 配置内容添加client-to-client
 重启openvpn服务
 systemctl restart openvpn@server
+
+
+### 关键技术：！！！！！！！就是这个折腾了很久
+https://blog.csdn.net/qq_14839543/article/details/126378827
+export NCCL_DEBUG=INFO
+export NCCL_IB_DISABLE=1
+export NCCL_SOCKET_IFNAME=tun0，这一步是最重要的
+
+最后一个要改成vpn 的tun0隧道即可，让NCCL 走VPN 的信道
+
+
+torchrun --nproc_per_node=2 --nnodes=3 --node_rank=0 --master_addr=10.8.0.3 --master_port=8001 train.py --train_args_file train_args/sft/qlora/llama2-7b-sft-qlora.json
