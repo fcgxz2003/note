@@ -63,3 +63,5 @@ export NCCL_SOCKET_IFNAME=tun0，这一步是最重要的
 
 
 torchrun --nproc_per_node=2 --nnodes=3 --node_rank=0 --master_addr=10.8.0.3 --master_port=8001 train.py --train_args_file train_args/sft/qlora/llama2-7b-sft-qlora.json
+
+单块的A100 的服务器会造成瓶颈，最好的分布式是大家都一样的配置，才能很好地增加参数。
