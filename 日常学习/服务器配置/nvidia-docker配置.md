@@ -21,6 +21,13 @@ sda->sda5 1.7T  固态 /        (设定全放容器之外的东西)
 
 sdb->sdb1 3.6T 机械 /mnt/home (设定全放容器相关内容)
 
+# 允许管理员用户ssh 系统
+修改/etc/ssh/sshd_config 的配置文件
+并将该行注释去掉并改成
+```
+PermitRootLogin yes
+```
+
 # 参考blog
 https://blog.csdn.net/hangvane123/article/details/88639279
 
