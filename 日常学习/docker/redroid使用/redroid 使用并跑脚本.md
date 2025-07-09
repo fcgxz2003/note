@@ -42,3 +42,5 @@ https://github.com/remote-android/redroid-doc/issues/742
 BTW, nvidia-container-toolkit won't work. And Nvidia GPU drivers for Linux is not compatible with Android.
 
 创业为半而中道崩殂
+
+give up 我决定跑本地了..
